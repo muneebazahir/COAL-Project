@@ -1,0 +1,29 @@
+module controlUnit(
+    input [5:0] opcode,
+    output reg [2:0] aluOp, //ALU opcode 
+    output reg regWrite  // register for writeback 
+);
+
+    always @(*) 
+	begin
+       	 	case(opcode)
+            	6'b000000: begin  // perform addition
+                	aluOp = 3'b000; 
+                	regWrite = 1'b1;
+            	end
+            	6'b000001: begin  // perform subtraction
+                	aluOp = 3'b001;
+                	regWrite = 1'b1;
+            	end
+            	6'b000010: begin  // perform and opertaion
+                	aluOp = 3'b010;
+                	regWrite = 1'b1;
+            	end
+            	default: begin
+                	aluOp = 3'b000;
+                	regWrite = 1'b0;
+            	end
+        endcase
+    end
+endmodule
+
