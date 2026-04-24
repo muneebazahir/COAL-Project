@@ -90,7 +90,7 @@ The datapath connects all components to allow smooth execution of instructions:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/mips-processor-verilog.git
+    https://github.com/muneebazahir/COAL-Project
    ```
 
 2. Open in your Verilog simulator (ModelSim / Vivado)
